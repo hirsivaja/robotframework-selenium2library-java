@@ -1415,6 +1415,7 @@ public class BrowserManagement extends RunOnFailureKeywordsAdapter {
 		DesiredCapabilities desiredCapabilities;
 		if ("ff".equals(browserName) || "firefox".equals(browserName)) {
 			desiredCapabilities = DesiredCapabilities.firefox();
+			desiredCapabilities.setJavascriptEnabled(true);
 			parseBrowserOptionsFirefox(browserOptions, desiredCapabilities);
 		} else if ("ie".equals(browserName) || "internetexplorer".equals(browserName)) {
 			desiredCapabilities = DesiredCapabilities.internetExplorer();
@@ -1495,11 +1496,7 @@ public class BrowserManagement extends RunOnFailureKeywordsAdapter {
 						Iterator<?> iteratorExtensions = extensions.iterator();
 						while (iteratorExtensions.hasNext()) {
 							File file = new File(iteratorExtensions.next().toString().replace('/', File.separatorChar));
-							try {
-								firefoxProfile.addExtension(file);
-							} catch (IOException e) {
-								logging.warn("Could not load extension: " + file.getAbsolutePath());
-							}
+							firefoxProfile.addExtension(file);
 						}
 					} else {
 						logging.warn("Unknown browserOption: " + key + ":" + entry.getValue());
