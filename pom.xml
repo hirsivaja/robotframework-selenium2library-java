@@ -8,11 +8,11 @@
 	</parent>
 
 	<groupId>com.github.markusbernhardt</groupId>
-	<artifactId>robotframework-selenium2library-java</artifactId>
+	<artifactId>robotframework-selenium3library-java</artifactId>
 	<version>1.4.0.9-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Robot Framework :: Selenium2Library</name>
+	<name>Robot Framework :: Selenium3Library</name>
 	<description>Java port of the Selenium 2 (WebDriver) Python library for Robot Framework</description>
 	<url>https://github.com/MarkusBernhardt/robotframework-selenium2library-java</url>
 
@@ -25,7 +25,7 @@
 		<xml.doclet.version>1.0.5</xml.doclet.version>
 		<robotframework.version>3.0</robotframework.version>
 		<selenium.version>3.0.1</selenium.version>
-		<keywords.class>Selenium2Library</keywords.class>
+		<keywords.class>Selenium3Library</keywords.class>
 	</properties>
 
 	<scm>
@@ -262,13 +262,13 @@
 						<configuration>
 							<doclet>com.github.markusbernhardt.xmldoclet.XmlDoclet</doclet>
 							<additionalparam>-d ${project.build.directory}/classes -filename
-								com/github/markusbernhardt/selenium2library/Selenium2Library.javadoc</additionalparam>
+								com/github/markusbernhardt/selenium3library/Selenium3Library.javadoc</additionalparam>
 							<useStandardDocletOptions>false</useStandardDocletOptions>
 							<javadocExecutable>${java.home}/../bin</javadocExecutable>
 							<sourceFileIncludes>
 								<sourceFileInclude>*.java</sourceFileInclude>
-								<sourceFileInclude>com/github/markusbernhardt/selenium2library/Selenium2Library.java</sourceFileInclude>
-								<sourceFileInclude>com/github/markusbernhardt/selenium2library/keywords/*.java</sourceFileInclude>
+								<sourceFileInclude>com/github/markusbernhardt/selenium3library/Selenium3Library.java</sourceFileInclude>
+								<sourceFileInclude>com/github/markusbernhardt/selenium3library/keywords/*.java</sourceFileInclude>
 							</sourceFileIncludes>
 							<docletArtifact>
 								<groupId>com.github.markusbernhardt</groupId>
